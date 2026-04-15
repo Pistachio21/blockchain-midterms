@@ -7,7 +7,9 @@
     "test": "hardhat test",
     "compile": "hardhat compile",
     "deploy": "hardhat run scripts/deploy.ts",
-    "node": "hardhat node"
+    "node": "hardhat node",
+    "build": "cd frontend && npm run build",
+    "build:frontend": "cd frontend && npm run build"
   },
   "repository": {
     "type": "git",
