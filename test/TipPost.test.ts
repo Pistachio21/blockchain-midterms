@@ -1,10 +1,16 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { TipPost } from "../typechain-types";
+import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+
+// Import chai matchers for hardhat
+import "@nomicfoundation/hardhat-chai-matchers";
 
 describe("TipPost", function () {
   let tipPost: TipPost;
-  let owner: any, user1: any, user2: any;
+  let owner: HardhatEthersSigner;
+  let user1: HardhatEthersSigner;
+  let user2: HardhatEthersSigner;
 
   beforeEach(async function () {
     const TipPostFactory = await ethers.getContractFactory("TipPost");

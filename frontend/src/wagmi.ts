@@ -1,9 +1,9 @@
 import { http, createConfig } from 'wagmi'
-import { sepolia, mainnet } from 'wagmi/chains'
+import { sepolia } from 'wagmi/chains'
 import { injected } from 'wagmi/connectors'
 
-// Use public Sepolia RPC - faster than default
-const SEPOLIA_RPC = 'https://rpc.sepolia.org'
+// Use same RPC as backend for consistency
+const SEPOLIA_RPC = 'https://ethereum-sepolia-rpc.publicnode.com'
 
 export const config = createConfig({
   chains: [sepolia],
@@ -15,6 +15,5 @@ export const config = createConfig({
   ],
   transports: {
     [sepolia.id]: http(SEPOLIA_RPC),
-    [mainnet.id]: http(),
   },
 })

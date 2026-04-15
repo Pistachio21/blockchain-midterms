@@ -1,4 +1,5 @@
 import { HardhatUserConfig } from "hardhat/types";
+import "@nomicfoundation/hardhat-chai-matchers";
 import "@nomicfoundation/hardhat-toolbox";
 import "dotenv/config";
 
